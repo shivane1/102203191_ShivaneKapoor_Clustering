@@ -28,7 +28,7 @@ Calinski-Harabasz Index: Ratio of between-cluster to within-cluster dispersion (
 
 Davies-Bouldin Index: Average similarity between clusters (lower is better)
 
-Results -
+# Results -
 
 ![image](https://github.com/user-attachments/assets/2510d219-67d3-4fab-af3c-be93095ad75f)
 ![image](https://github.com/user-attachments/assets/01e33524-24b0-4a0e-8b33-4b7a56ce800c)
