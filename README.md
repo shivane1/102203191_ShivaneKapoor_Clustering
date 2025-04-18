@@ -37,7 +37,8 @@ Results -
 
 
 
-Findings:
+#Findings:
+
 Preprocessing Impact: The choice of preprocessing method had a substantial effect on clustering outcomes. Techniques such as MinMax Scaling and combined scaling pipelines (MinMax → Standard) consistently outperformed raw data, especially in terms of Silhouette and Calinski-Harabasz scores.
 
 K-Means Clustering: This algorithm generally delivered the most reliable performance, especially when the number of clusters was set to 3, which aligns with the actual number of classes in the Iris dataset. It achieved the highest Silhouette and Calinski-Harabasz scores across multiple preprocessing pipelines.
