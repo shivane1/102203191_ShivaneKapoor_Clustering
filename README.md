@@ -33,3 +33,17 @@ Results -
 ![image](https://github.com/user-attachments/assets/2510d219-67d3-4fab-af3c-be93095ad75f)
 ![image](https://github.com/user-attachments/assets/01e33524-24b0-4a0e-8b33-4b7a56ce800c)
 ![image](https://github.com/user-attachments/assets/b0f5dd35-b4ef-4505-b148-03d44381b781)
+
+
+
+
+Findings:
+Preprocessing Impact: The choice of preprocessing method had a substantial effect on clustering outcomes. Techniques such as MinMax Scaling and combined scaling pipelines (MinMax → Standard) consistently outperformed raw data, especially in terms of Silhouette and Calinski-Harabasz scores.
+
+K-Means Clustering: This algorithm generally delivered the most reliable performance, especially when the number of clusters was set to 3, which aligns with the actual number of classes in the Iris dataset. It achieved the highest Silhouette and Calinski-Harabasz scores across multiple preprocessing pipelines.
+
+Agglomerative Clustering: The hierarchical clustering method demonstrated high sensitivity to the type of preprocessing applied. In some configurations, especially without proper scaling, it produced unbalanced or overlapping clusters, reflected in poorer evaluation scores.
+
+Mean Shift Clustering: This density-based method automatically determined the number of clusters. It was less affected by preprocessing variations but often failed to detect exactly 3 clusters, which limited its comparability. When 3 clusters were detected, performance was moderate.
+
+Davies-Bouldin Index Observations: This index yielded lowest (best) scores when clusters were well-separated, which most commonly occurred after normalization or PCA-based preprocessing. This reinforces the importance of dimensionality reduction and feature scaling for optimal cluster compactness and separation.
